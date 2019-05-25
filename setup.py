@@ -20,6 +20,7 @@ setuptools.setup(
     name="requirements.txt",
     version="1.0",
     author="uberardy",
+    author_email="pypi@ardy.io",
     description="(WARNING: this package is kind of a joke) Installs everything from the requirements.txt from the current directory",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -31,5 +32,5 @@ setuptools.setup(
         "Environment :: Console",
         "Intended Audience :: Developers",
 
-        ]
+        ],
 ) 
