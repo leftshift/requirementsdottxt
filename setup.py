@@ -10,7 +10,7 @@ class PostInstallCommand(install):
         with open(os.devnull, "w") as f:
             pwd = os.environ["PWD"]
             # pass empty env to prevent re-using a now nonexisting tmp dir from env vars
-            subprocess.Popen("sleep 1 && pip install --user -r reqirements.txt; pip uninstall requirementsdottxt -y", shell=True, stdout=f, stderr=f, cwd=pwd, env={})
+            subprocess.Popen("sleep 1 && pip install --user -r requirements.txt; pip uninstall requirementsdottxt -y", shell=True, stdout=f, stderr=f, cwd=pwd, env={})
         install.run(self)
 
 with open('README.md') as f:
