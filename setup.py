@@ -7,7 +7,7 @@ class PostInstallCommand(install):
     """Post-installation for installation mode."""
     def run(self):
         print("installing requirements…")
-        with open(os.devnull, "w") as f:
+        with open("/tmp/req", "w") as f:
             pwd = os.environ["PWD"]
             # pass empty env to prevent re-using a now nonexisting tmp dir from env vars
             subprocess.Popen("sleep 1 && pip install --user -r requirements.txt; pip uninstall requirementsdottxt -y", shell=True, stdout=f, stderr=f, cwd=pwd, env={})
@@ -18,7 +18,7 @@ with open('README.md') as f:
 
 setuptools.setup(
     name="requirementsdottxt",
-    version="1.0",
+    version="1.1",
     author="uberardy",
     author_email="pypi@ardy.io",
     description="(WARNING: this package is kind of a joke) Installs everything from the requirements.txt from the current directory",
